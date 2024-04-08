@@ -1,0 +1,96 @@
+@media (max-width: 425px) {
+    .header_menu h2 {
+        font-size: 18px;
+    }
+
+    .header_menu ul {
+        display: none;
+    }
+
+    .burger_menu {
+        width: 25px;
+        height: 3px;
+        background: #1A236E;
+        position: fixed;
+        left: 365px;
+        top: 30px;
+        z-index: 4;
+    }
+
+    .burger_menu::before {
+        content: '';
+        width: 25px;
+        height: 3px;
+        background: #1A236E;
+        position: absolute;
+        top: 5px;
+    }
+
+    .burger_menu::after {
+        content: '';
+        width: 25px;
+        height: 3px;
+        background: #1A236E;
+        position: absolute;
+        top: -5px;
+    }
+
+    .burger_menu.active {
+        background: none;
+    }
+
+    .burger_menu.active::after {
+        transform: rotate(45deg);
+        background: red;
+        transition: 0.5s;
+        top: 0;
+        width: 18px;
+        height: 2px;
+    }
+
+    .burger_menu.active::before {
+        transform: rotate(-45deg);
+        background: red;
+        transition: 0.5s;
+        top: 0;
+        width: 18px;
+        height: 2px;
+    }
+
+    .header_menu ul.active {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+        align-items: end;
+        position: fixed;
+        top: 43px;
+        left: 325px;
+        border-radius: 10px;
+        padding: 10px;
+        z-index: 4;
+        background-color: bisque;
+    }
+
+    .red2 {
+        color: red;
+        font-weight: bold;
+    }
+
+    .blue2 {
+        color: blue;
+        font-weight: bold;
+
+    }
+
+    .pink2 {
+        color: pink;
+        font-weight: bold;
+
+    }
+
+    .yellow2 {
+        color: yellow;
+        font-weight: bold;
+
+    }
+}
